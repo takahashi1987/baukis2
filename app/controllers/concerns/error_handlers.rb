@@ -5,7 +5,8 @@ module ErrorHandlers
     rescue_from StandardError, with: :rescue500
     rescue_from ApplicationController::Forbidden, with: :rescue403
     rescue_from ApplicationController::IpAddressRejected, with: :rescue403
-    rescue_from ActiveRecord::RecordNotfound, with: :rescue404
+    rescue_from ActiveRecord::RecordNotFound, with: :rescue404
+    rescue_from ActionController::ParameterMissing, with: :rescue400
   end
 
   private
@@ -29,5 +30,9 @@ module ErrorHandlers
 
   def rescue500(e)
     render "errors/internal_server_error", status: 500
+  end
+
+  def rescue400(e)
+    render "errors/bad_request", status: 400
   end
 end

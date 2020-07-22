@@ -17,7 +17,7 @@ class Admin::StaffMembersController < Admin::Base
   end
 
   def create
-    @staff_member = StaffMember.new(params[:staff_member])
+    @staff_member = StaffMember.new(staff_member_params)
     if @staff_member.save
       flash.notice = "職員アカウントを新規登録しました。"
       redirect_to :admin_staff_members

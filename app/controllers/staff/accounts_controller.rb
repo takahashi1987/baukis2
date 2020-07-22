@@ -4,7 +4,6 @@ class Staff::AccountsController < Staff::Base
   end
 
   def edit
-
     @staff_member = current_staff_member
   end
 

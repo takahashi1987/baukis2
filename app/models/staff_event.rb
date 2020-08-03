@@ -7,7 +7,7 @@ class StaffEvent < ApplicationRecord
   DESCRIPTION = {
     logged_in: "ログイン",
     logged_out: "ログアウト",
-    rejectes: "ログイン拒否"
+    rejected: "ログイン拒否"
   }
 
   def description

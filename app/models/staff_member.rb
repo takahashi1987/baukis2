@@ -8,6 +8,7 @@ class StaffMember < ApplicationRecord
     self.given_name = normalize_as_name(given_name)
     self.family_name_kana = normalize_as_furigana(family_name_kana)
     self.given_name_kana = normalize_as_furigana(given_name_kana)
+    self.email = normalize_as_email(email)
   end
 
   KATAKANA_REGEXP = /\A[\p{katakana}\u{30fc}]+\z/
@@ -26,6 +27,8 @@ class StaffMember < ApplicationRecord
     before: -> (obj) { 1.year.form_now.to_date },
     allow_blank: true
   }
+
+  validates :email, presence: true, "valid_email_2/email": true, uniqueness: { case_sensitive: false}
 
   def password=(raw_password)
     if raw_password.kind_of?(String)

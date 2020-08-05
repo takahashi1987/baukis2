@@ -28,7 +28,7 @@ class StaffMember < ApplicationRecord
     allow_blank: true
   }
 
-  validates :email, presence: true, "valid_email_2/email": true, uniqueness: { case_sensitive: false}
+  validates :email, presence: true, "valid_email_2/email": true, uniqueness: { case_sensitive: false }
 
   def password=(raw_password)
     if raw_password.kind_of?(String)

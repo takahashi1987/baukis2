@@ -26,7 +26,7 @@ class StaffMember < ApplicationRecord
   }
   validates :end_date, date: {
     after: :start_date,
-    before: -> (obj) { 1.year.form_now.to_date },
+    before: -> (obj) { 1.year.from_now.to_date },
     allow_blank: true
   }
 

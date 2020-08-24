@@ -1,3 +1,2 @@
 class WorkAddress < Address
-
 end

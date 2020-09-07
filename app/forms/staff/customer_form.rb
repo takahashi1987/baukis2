@@ -44,7 +44,7 @@ class Staff::CustomerForm
 
   def home_address_params
     @params.require(:home_address).permit(
-      :postal_cord, 
+      :postal_code, 
       :prefecture, 
       :city, 
       :address1, 
@@ -54,7 +54,7 @@ class Staff::CustomerForm
 
   def work_address_params
     @params.require(:work_address).permit(
-      :postal_cord, 
+      :postal_code, 
       :prefecture, 
       :city, 
       :address1, 

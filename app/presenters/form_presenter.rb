@@ -19,7 +19,7 @@ class FormPresenter
 
   def text_field_block(name, label_text, options = {})
     markup(:div, class: "input-block") do |m|
-      m << decoreated_label(name, label_text, options)
+      m << decorated_label(name, label_text, options)
       m << text_field(name, options)
       m << error_message_for(name)
     end
@@ -27,7 +27,7 @@ class FormPresenter
 
   def password_field_block(name, label_text, options = {})
     markup(:div, class: "input-block") do |m|
-      m << decoreated_label(name, label_text, options)
+      m << decorated_label(name, label_text, options)
       m << password_field(name, options)
       m << error_message_for(name)
     end
@@ -35,7 +35,7 @@ class FormPresenter
 
   def date_field_block(name, label_text, options = {})
     markup(:div, class: "input-block") do |m|
-      m << decoreated_label(name, label_text, options)
+      m << decorated_label(name, label_text, options)
       m << date_field(name, options)
       m << error_message_for(name)
     end
@@ -53,7 +53,7 @@ class FormPresenter
 
   def drop_down_list_block(name, label_text, choices, options = {})
     markup(:div, class: "input-block") do |m|
-      m << decoreated_label(name, label_text, options)
+      m << decorated_label(name, label_text, options)
       m << form_builder.select(name, choices, { include_black: true }, options)
       m << error_message_for(name)
     end
@@ -61,7 +61,7 @@ class FormPresenter
   
   private
 
-  def decoreated_label(name, label_text, options = {})
+  def decorated_label(name, label_text, options = {})
     label(name, label_text, class: options[:required] ? "required" : nil)
   end
 end

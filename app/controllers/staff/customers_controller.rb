@@ -18,7 +18,7 @@ class Staff::CustomersController < Staff::Base
   def create
     @customer_form = Staff::CustomerForm.new
     @customer_form.assign_attributes(params[:form])
-    if @customer.save
+    if @customer_form.save
       flash.notice = "顧客を追加しました。"
       redirect_to action: "index"
     else

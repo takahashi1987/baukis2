@@ -1,7 +1,7 @@
 Rails.application.configure do
   config.baukis2 = {
-    staff: { host: "baukis2.example.com", path: "" },
-    admin: { host: "baukis2.example.com", path: "admin" },
+    staff: { host: "cms-example.tk", path: "" },
+    admin: { host: "cms-example.tk", path: "admin" },
     customer: { host: "example.com", path: "mypage" }
   }
 end

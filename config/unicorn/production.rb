@@ -3,11 +3,11 @@ $worker  = 2
 #何秒経過すればワーカーを削除するのかを決める
 $timeout = 30
 #自分のアプリケーション名、currentがつくことに注意。
-$app_dir = "/var/www/rails/baukis2/current"
+$app_dir = "/var/www/baukis2/current"
 #リクエストを受け取るポート番号を指定。後述
-$listen = File.expand_path 'tmp/sockets/unicorn.sock', $app_dir
+$listen  = File.expand_path 'tmp/sockets/unicorn.sock', $app_dir
 #PIDの管理ファイルディレクトリ
-$pid = File.expand_path 'tmp/pids/unicorn.pid', $app_dir
+$pid     = File.expand_path 'tmp/pids/unicorn.pid', $app_dir
 #エラーログを吐き出すファイルのディレクトリ
 $std_log = File.expand_path 'log/unicorn.log', $app_dir
 

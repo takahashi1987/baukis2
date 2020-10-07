@@ -29,10 +29,6 @@ group :development do
   gem "listen", "~> 3.2"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
-  gem "capistrano"
-  gem "capistrano-bundler"
-  gem "capistrano-rails"
-  gem "capistrano-rbenv"
 end
 
 group :test do
@@ -41,8 +37,4 @@ group :test do
   gem "webdrivers"
   gem "rspec-rails"
   gem "factory_bot_rails"
-end
-
-group :production, :staging do
-  gem "unicorn"
 end

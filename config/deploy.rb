@@ -12,7 +12,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push("log", "tmp/pids", "tmp/cache", "
 
 set :keep_releases, 5
 
-set :rbenv_ruby, "2.6.6"
+set :rbenv_ruby, "2.6.4"
 
 set :log_level, :debug
 
